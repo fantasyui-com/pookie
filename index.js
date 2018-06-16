@@ -9,8 +9,9 @@ const Tree = {
 }
 
 class TreeNode {
-  constructor(name) {
+  constructor(name, parent) {
     this.name = name;
+    this.parent = parent;
     this.data = new Map();
   }
 
@@ -19,29 +20,45 @@ class TreeNode {
   }
 
   set(name, object) {
-    return this.data.set(name, object);
+    this.data.set(name, object);
+    return object;
   }
   get(name) {
     return this.data.get(name);
   }
 
-  make({path}) {
+  locate(path) {
+    console.log('')
+    let selectedNode = this;
 
-    let target = this;
     path.forEach(function(name){
-
-      if(target.has(name) ){
-        // name already there
-        target = target.get(name);
-      }else{
-        const newNode = new TreeNode(name);
-        target.set(name, newNode);
-        target = newNode;
+      if(selectedNode){
+        if(selectedNode.has(name) ){
+          // name already there, so just grab that node
+          selectedNode = selectedNode.get(name);
+        }else{
+          // create new node
+          selectedNode = null;
+        }
       }
-
     });
 
+    return selectedNode;
   }
+
+  make({path}) {
+    let selectedNode = this;
+    path.forEach(function(name){
+      if(selectedNode.has(name) ){
+        // name already there, so just grab that node
+        selectedNode = selectedNode.get(name);
+      }else{
+        // create new node
+        selectedNode = selectedNode.set(name, new TreeNode(name, parent:selectedNode));
+      }
+    });
+  }
+
 }
 
 class TreeRoot extends TreeNode {
@@ -75,3 +92,4 @@ let map = `
 
 Tree.import(root, map);
 console.log( util.inspect(root, { showHidden: true, depth: null }) );
+console.log( root.locate('Root/Users'.split('/')) )
