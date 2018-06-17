@@ -1,4 +1,28 @@
+const uuidv4 = require('uuid/v4');
+
 const {Tree, Root, Branch} = require('./index.js');
+
+
+const data = function(pipe){
+
+  const record = function(){
+
+    const object = {};
+
+    object.id = uuidv4();
+    object.rev = (new Date).getTime();
+
+    return object;
+
+  }
+
+  const a = setInterval(function(){pipe(record())},3*1000)
+  const b = setInterval(function(){pipe(record())},5*1000)
+  const c = setInterval(function(){pipe(record())},8*1000)
+
+  setTimeout(function(){[a,b,c].map(i=>clearInterval(i))},60*1000)
+
+}
 
 const root = new Root();
 
@@ -37,3 +61,6 @@ let binding = Tree.decodeMap(`
   apply message Root/Users/System/Messages
 
 `);
+
+
+Tree.importData(root, data);
