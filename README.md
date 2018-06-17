@@ -76,10 +76,11 @@ And extend out tree of views with more ideas:
     - Expired
     - Starred
   - Drafts
-    All
-    Recurring
+    - All
+    - Recurring
 
-As you can see, even a tiny program can ballon out to a complex tree.
-With pookie the state of your data is easy to see.
+As you can see, even a tiny program, can ballon out to a complex tree. Now consider multiple users, multiple administrators, and unforeseen features and the above tree can explode into dozens of views.
+
+With pookie the state of your data is easy to see, predictable, and consistent. It is just a Node, with Nodes.
 
 ![](pookie.png)
