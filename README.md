@@ -8,7 +8,7 @@ How do you make it easy to understand, to visualize, strategize and manage?
 
 ## Tree
 
-### he root of a tree can be viewed as a list of objects:
+### The root of a tree can be viewed as a list of objects:
 
         [{}
          {}
@@ -55,7 +55,7 @@ In the todo app example you will need them (nested views) when adding a PRIORITY
 
 Let us switch to a more comfortable tree format:
 
-o All Tasks
-  o Completed Tasks
-  o Incomplete Tasks
-    o Priority Tasks
+- All Tasks
+  - Completed Tasks
+  - Incomplete Tasks
+    - Priority Tasks
