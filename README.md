@@ -78,3 +78,8 @@ And extend out tree of views with more ideas:
   - Drafts
     All
     Recurring
+
+As you can see, even a tiny program can ballon out to a complex tree.
+With pookie the state of your data is easy to see.
+
+![](pookie.png)
