@@ -4,7 +4,8 @@
   "description": "Tiny object database for use as application state. The query engine is a map/filter/reduce function that automatically re-runs on record change and add.",
   "main": "index.js",
   "scripts": {
-    "build": "browserify index.js > pookie.min.js"
+    "test": "node test",
+    "build": "browserify index.js > dist/pookie.min.js"
   },
   "repository": {
     "type": "git",
