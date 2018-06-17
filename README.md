@@ -59,3 +59,22 @@ Let us switch to a more comfortable tree format:
   - Completed Tasks
   - Incomplete Tasks
     - Priority Tasks
+
+And extend out tree of views with more ideas:
+
+- All Tasks
+  - Completed Tasks
+    - Starred
+    - Archived
+    - Expired
+  - Incomplete Tasks
+    - Today's Tasks
+      - High Priority
+        - Starred
+      - Low Priority
+    - Recurring
+    - Expired
+    - Starred
+  - Drafts
+    All
+    Recurring
