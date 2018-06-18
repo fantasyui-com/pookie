@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node test",
-    "build": "browserify index.js > dist/pookie.min.js"
+    "build": "browserify web.js > dist/pookie.web.js"
   },
   "repository": {
     "type": "git",
