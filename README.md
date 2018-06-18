@@ -1,6 +1,11 @@
 # pookie
 Tiny object database for use as application state. The query engine is a map/filter/reduce function that automatically re-runs on record change and add.
 
+## Terms
+
+List - List of Objects
+Object - Object with uuid, version, kind, and other information
+
 ## About
 
 How do you keep track of views of data that depend on other views of data?

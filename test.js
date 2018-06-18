@@ -9,8 +9,9 @@ const data = function(pipe){
 
     const object = {};
 
-    object.id = uuidv4();
-    object.rev = (new Date).getTime();
+    object.uuid = uuidv4();
+    object.version = (new Date).getTime();
+    object.class = (new Date).getTime();
 
     return object;
 

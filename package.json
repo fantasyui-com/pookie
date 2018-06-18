@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/fantasyui-com/pookie#readme",
   "dependencies": {
+    "faker": "^4.1.0",
     "lodash": "^4.17.10"
   },
   "devDependencies": {
