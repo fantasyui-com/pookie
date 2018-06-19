@@ -2,10 +2,11 @@ const Tree = require('./lib/Tree.js')
 const Root = require('./lib/Root.js')
 const Branch = require('./lib/Branch.js')
 
-module.exports = function({options, reconciler}){
+module.exports = function(path, reconciler){
+
+  const root = new Root();
 
   const response = {root};
-  const root = new Root();
 
 
   const fake = {};
