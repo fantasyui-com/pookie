@@ -63,3 +63,4 @@ typings/
 
 
 .parcel-cache
+.DS_Store
