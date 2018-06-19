@@ -89,3 +89,8 @@ As you can see, even a tiny program, can ballon out to a complex tree. Now consi
 With pookie the state of your data is easy to see, predictable, and consistent. It is just a Node, with Nodes.
 
 ![](pookie.png)
+
+## Related Projects
+
+- [hurlyburly](https://github.com/fantasyui-com/hurlyburly) - Todo Application based on pookie object tree database.
+- [cuddlemuffin](https://github.com/fantasyui-com/cuddlemuffin) - Lightweight and Elegant Multiuser and Multiprocess Safe Object Store with Conflict Tracking.
