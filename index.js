@@ -28,7 +28,11 @@ module.exports = function(vfs){
     }, // API
 
     mount: function(path, reconciler){
-
+      const branch = root.locate(path);
+      branch.on('data', function(dataList){
+        console.log('Path "%s" got data and is sending it into the reconciler.', path)
+        reconciler(dataList);
+      });
     }, // API
 
     pipe: function(object){
