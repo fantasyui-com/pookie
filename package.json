@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node test",
-    "build": "browserify --standalone pookie -e source.js -t babelify -o index.js"
+    "build": "browserify --standalone pookie -e index.js -t babelify -o bundle.js"
   },
   "repository": {
     "type": "git",
