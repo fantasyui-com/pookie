@@ -1,6 +1,5 @@
-const Tree = require('./lib/Tree.js');
-const Root = require('./lib/Root.js');
-const Branch = require('./lib/Branch.js');
+const {Tree, Root, Branch} = require('./core.js');
+
 
 module.exports = function(vfs){
 

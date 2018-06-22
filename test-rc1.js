@@ -1,5 +1,8 @@
 const uuidv4 = require('uuid/v4');
+
 const {Tree, Root, Branch} = require('./index.js');
+
+
 const data = function(pipe){
 
   const record = function(){
@@ -21,22 +24,24 @@ const data = function(pipe){
   setTimeout(function(){[a,b,c].map(i=>clearInterval(i))},60*1000)
 
 }
+
 const root = new Root();
+
 
 let map = Tree.decodeMap(`
 
   # Main Objects
-  make Applications *
+  make Root/Users
+  make Root/Docs
+  make Root/Messages
 
-  make Applications/Todo todo
-  make Applications/Todo/Today today
-  make Applications/Todo/Today/Priority priority,hot,important
+  # Add Users
+  make Root/Users/System
+  make Root/Users/Admin
 
-  make Applications/Debugger debug
-  make Applications/Debugger/Success success
-  make Applications/Debugger/Danger danger
-  make Applications/Debugger/Warning warning
-  make Applications/Debugger/Info info
+  # Messages to display
+  make Root/Users/Admin/Messages
+  make Root/Users/System/Messages
 
 `);
 Tree.importMap(root, map);
