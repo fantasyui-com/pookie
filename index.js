@@ -1,3 +1,5 @@
+const enbuffer = require('../enbuffer')();
+
 const {Tree, Root, Branch} = require('./core.js');
 
 
@@ -28,10 +30,15 @@ module.exports = function(vfs){
 
     mount: function(path, reconciler){
       const branch = root.locate(path);
-      branch.on('data', function(dataList){
-        // console.log('Path "%s" got data and is sending it into the reconciler.', path)
-        reconciler(dataList);
+      // branch.on('data', function(dataList){
+      //   // console.log('Path "%s" got data and is sending it into the reconciler.', path)
+      //   reconciler(dataList);
+      // });
+
+      branch.on('object', function(object){
+        if ( enbuffer.set(path, object) ) reconciler(enbuffer.all( path ));
       });
+
     }, // API
 
     pipe: function(object){
