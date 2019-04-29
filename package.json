@@ -22,10 +22,10 @@
     "lodash": "^4.17.10"
   },
   "devDependencies": {
-    "faker": "^4.1.0",
-    "uuid": "^3.2.1",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "babelify": "^8.0.0"
+    "babelify": "^8.0.0",
+    "faker": "^4.1.0",
+    "uuid": "^3.3.2"
   }
 }
