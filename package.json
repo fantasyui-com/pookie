@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/fantasyui-com/pookie#readme",
   "dependencies": {
-    "lodash": "^4.17.14"
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
