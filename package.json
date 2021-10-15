@@ -5,14 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "node test",
-    "build": "browserify --standalone pookie -e index.js -t babelify -o bundle.js"
+    "build": "browserify --standalone pookie -e index.js -t babelify -o bundle.js",
+    "save": "git add .; git commit -m 'New Release'; git push; npm version patch; npm publish; git push;"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fantasyui-com/pookie.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "fantasyui.com <fantasyui.com@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fantasyui-com/pookie/issues"
